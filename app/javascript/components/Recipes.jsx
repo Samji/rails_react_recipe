@@ -16,9 +16,9 @@ const Recipes = () => {
           })
           .then((res) => setRecipes(res))
           .catch(() => navigate("/"));
-      }, []);
+    }, []);
 
-      const allRecipes = recipes.map((recipe, index) => (
+    const allRecipes = recipes.map((recipe, index) => (
         <div key={index} className="col-md-6 col-lg-4">
           <div className="card mb-4">
             <img
@@ -34,14 +34,14 @@ const Recipes = () => {
             </div>
           </div>
         </div>
-      ));
-      const noRecipe = (
+    ));
+    const noRecipe = (
         <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
           <h4>
             No recipes yet. Why not <Link to="/new_recipe">create one</Link>
           </h4>
         </div>
-      );
+    );
     
       return (
         <>
