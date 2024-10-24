@@ -10,6 +10,18 @@ descriptions = ['Juicy', 'Cool', 'Mellow', 'Grown on the Hills of Appalachia', '
   )
 end
 
+1.times do |i|
+  Pokemon.create(
+    name: "Bulbasaur",
+    description: "Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves.",
+    image: "https://img.pokemondb.net/artwork/avif/bulbasaur.avif",
+    health: 45,
+    attack: 49,
+    defense: 49,
+    speed: 45
+  )
+end
+
 9.times do |i|
   Recipe.create(
     name: "Recipe #{i + 1}",

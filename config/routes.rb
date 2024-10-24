@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'pokemon/index'
+      post 'pokemon/create'
+      get '/show/:id', to: 'pokemon#show'
+      delete '/destroy/:id', to: 'pokemon#destroy'
       get 'flowers/index'
       post 'flowers/create'
       get '/show/:id', to: 'flowers#show'
