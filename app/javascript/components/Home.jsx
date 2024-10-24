@@ -9,7 +9,6 @@ export default () => (
         <p className="lead">
           A curated list of recipes for the best homemade meal and delicacies.
         </p>
-        <hr className="my-4" />
         <Link
           to="/recipes"
           className="btn btn-lg custom-button"
@@ -17,6 +16,21 @@ export default () => (
         >
           View Recipes
         </Link>
+        <hr className="my-4" />
+      </div>
+      <div className="container secondary-color">
+        <h1 className="display-4">Flowers</h1>
+        <p className="lead">
+          A curated list of flowers for the best colour and vibrance.
+        </p>
+        <Link
+          to="/flowers"
+          className="btn btn-lg custom-button"
+          role="button"
+        >
+          View Flowers
+        </Link>
+        <hr className="my-4" />
       </div>
     </div>
   </div>

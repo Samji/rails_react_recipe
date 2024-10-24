@@ -1,3 +1,15 @@
+# Array of possible colours
+colours = ['Red', 'Green', 'Blue', 'Yellow', 'Purple']
+descriptions = ['Juicy', 'Cool', 'Mellow', 'Grown on the Hills of Appalachia', 'Grown in Sweden']
+
+9.times do |i|
+  Flower.create(
+    name: "Flower #{i + 1}",
+    colour: colours.sample,
+    description: descriptions.sample
+  )
+end
+
 9.times do |i|
   Recipe.create(
     name: "Recipe #{i + 1}",
