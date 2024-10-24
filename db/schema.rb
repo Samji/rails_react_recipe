@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_07_150658) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_16_105527) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flowers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "colour", null: false
+    t.text "description", null: false
+    t.string "image", default: "https://www.gardendesign.com/pictures/images/675x529Max/site_3/heat-it-up-scarlet-gaillardia-gaillardia-hybrid-blanket-flower-proven-winners_16235.jpg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name", null: false
