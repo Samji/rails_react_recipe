@@ -32,6 +32,20 @@ export default () => (
         </Link>
         <hr className="my-4" />
       </div>
+      <div className="container secondary-color">
+        <h1 className="display-4">Pokemon</h1>
+        <p className="lead">
+          A list of Pokemon with some of their attributes.
+        </p>
+        <Link
+          to="/"
+          className="btn btn-lg custom-button"
+          role="button"
+        >
+          View Pokemon
+        </Link>
+        <hr className="my-4" />
+      </div>
     </div>
   </div>
 );
