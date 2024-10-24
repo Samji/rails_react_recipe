@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_24_121106) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_16_105527) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,18 +19,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_24_121106) do
     t.string "colour", null: false
     t.text "description", null: false
     t.string "image", default: "https://www.gardendesign.com/pictures/images/675x529Max/site_3/heat-it-up-scarlet-gaillardia-gaillardia-hybrid-blanket-flower-proven-winners_16235.jpg"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pokemons", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description", null: false
-    t.string "image", null: false
-    t.string "health", null: false
-    t.string "attack", null: false
-    t.string "defense", null: false
-    t.string "speed", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
