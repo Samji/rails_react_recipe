@@ -26,7 +26,7 @@ const Pokemon =() => {
                  />
                 <div className="card-body">
                     <h5 className="card-title">{pokemon.name}</h5>
-                    <Link to="/" className="btn custom-button">
+                    <Link to={`/pokemon/${pokemon.id}`} className="btn custom-button">
                         View Pokemon
                     </Link>
                 </div>
