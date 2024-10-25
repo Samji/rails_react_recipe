@@ -38,7 +38,7 @@ export default () => (
           A list of Pokemon with some of their attributes.
         </p>
         <Link
-          to="/"
+          to="/pokemon"
           className="btn btn-lg custom-button"
           role="button"
         >
