@@ -53,7 +53,7 @@ const Pokemon =() => {
             <div className="py-5">
                 <main className="container">
                     <div className="text-end mb-3">
-                        <Link to="/" className="btn custom-button">
+                        <Link to="/pokemon/new" className="btn custom-button">
                             Add a Pokemon
                         </Link>
                     </div>

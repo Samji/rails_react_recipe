@@ -6,6 +6,12 @@ class Api::V1::PokemonController < ApplicationController
   end
 
   def create
+    pokemon = Pokemon.create!(pokemon_params)
+    if pokemon
+      render json: pokemon
+    else
+      render json: pokemon.errors
+    end
   end
 
   def show
@@ -16,6 +22,10 @@ class Api::V1::PokemonController < ApplicationController
   end
 
   private
+
+  def pokemon_params
+    params.permit(:name, :health, :attack, :defense, :speed, :description, :image)
+  end
 
   def set_pokemon
     @pokemon = Pokemon.find(params[:id])

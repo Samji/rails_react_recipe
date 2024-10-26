@@ -12,6 +12,7 @@ import NewFlower from "../components/NewFlower"
 
 import PokemonList from "../components/PokemonList"
 import PokemonDetail from "../components/PokemonDetail"
+import PokemonNew from "../components/PokemonNew"
 
 export default (
   <Router>
@@ -25,6 +26,7 @@ export default (
       <Route path="/flower" element={<NewFlower />} />
       <Route path="/pokemon" element={<PokemonList />} />
       <Route path="/pokemon/:id" element={<PokemonDetail />} />
+      <Route path="/pokemon/new" element={<PokemonNew />} />
     </Routes>
   </Router>
 );
