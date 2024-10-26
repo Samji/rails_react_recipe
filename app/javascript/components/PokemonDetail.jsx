@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const PokemonDetail = () => {
     const params = useParams();
+    const navigate = useNavigate();
     const [pokemon, setPokemon] = useState({});
 
     useEffect(() => {
@@ -17,6 +18,27 @@ const PokemonDetail = () => {
             .then((response) => setPokemon(response))
             .catch(() => navigate("/pokemon"));
     }, [params.id]);
+
+    const deletePokemon =() => {
+        const url = `/api/v1/destroy/${params.id}`;
+        const token = document.querySelector('meta[name="csrf-token"]').content;
+
+        fetch(url, {
+            method: "DELETE",
+            headers: {
+                "X-CSRF-Token": token,
+                "Content-Type": "application/json",
+            },
+        })
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error("Network response was not ok.")
+        })
+        .then(() => navigate("/pokemon"))
+        .catch((error) => console.log(error.message));
+    };
 
     return (
         <div className="">
@@ -56,6 +78,7 @@ const PokemonDetail = () => {
                         <button
                             type="button"
                             className="btn btn-danger"
+                            onClick={deletePokemon}
                         >
                             Delete Pokemon
                         </button>

@@ -19,6 +19,8 @@ class Api::V1::PokemonController < ApplicationController
   end
 
   def destroy
+    @pokemon&.destroy
+    render json: { message: 'Pokemon deleted!' }
   end
 
   private
